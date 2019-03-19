@@ -9,10 +9,10 @@ namespace Sovamo.Models
 {
     public class Context : DbContext
     {
-        public Context() : base("bancosovamo") { Configuration.ProxyCreationEnabled = false; Database.SetInitializer(new DropCreateDatabaseIfModelChanges<Context>()); }
+        public Context() : base("Sovamo") { Configuration.ProxyCreationEnabled = false; Database.SetInitializer(new DropCreateDatabaseIfModelChanges<Context>()); }
 
 
-        //           Classes aqui
+        public DbSet<Paginicial> Paginicials { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder) { modelBuilder.Conventions.Remove(); modelBuilder.Conventions.Remove<PluralizingTableNameConvention>(); }
