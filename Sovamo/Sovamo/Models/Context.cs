@@ -12,7 +12,7 @@ namespace Sovamo.Models
         public Context() : base("Sovamo") { Configuration.ProxyCreationEnabled = false; Database.SetInitializer(new DropCreateDatabaseIfModelChanges<Context>()); }
 
 
-        public DbSet<Paginicial> Paginicials { get; set; }
+        public DbSet<CadCliente> CadClientes { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder) { modelBuilder.Conventions.Remove(); modelBuilder.Conventions.Remove<PluralizingTableNameConvention>(); }

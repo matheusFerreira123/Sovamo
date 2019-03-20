@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Sovamo.Models.CadCliente>
+
+@{
+    ViewBag.Title = "Cadastro";
+}
+
+<h2 style="margin-left:35%">Cadastro de Clientes</h2>
+
+<p style="margin-left:43%">
+    @Html.ActionLink("Cadastre-se agora", "Create")
+</p>
+<table class="table">
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cnpj)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Senha)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.ClienteId }) |
+
+            </td>
+        </tr>
+
+        
+    }
+
+</table>
+
