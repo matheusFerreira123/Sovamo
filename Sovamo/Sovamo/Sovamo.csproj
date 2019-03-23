@@ -139,16 +139,18 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CadClientesController.cs" />
+    <Compile Include="Controllers\CadEstabelecimentosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201903210103002_cliente.cs" />
-    <Compile Include="Migrations\201903210103002_cliente.Designer.cs">
-      <DependentUpon>201903210103002_cliente.cs</DependentUpon>
+    <Compile Include="Migrations\201903232003298_run.cs" />
+    <Compile Include="Migrations\201903232003298_run.Designer.cs">
+      <DependentUpon>201903232003298_run.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CadCliente.cs" />
+    <Compile Include="Models\CadEstabelecimento.cs" />
     <Compile Include="Models\Context.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -197,6 +199,11 @@
     <Content Include="Views\CadClientes\Details.cshtml" />
     <Content Include="Views\CadClientes\Edit.cshtml" />
     <Content Include="Views\CadClientes\Index.cshtml" />
+    <Content Include="Views\CadEstabelecimentos\Create.cshtml" />
+    <Content Include="Views\CadEstabelecimentos\Delete.cshtml" />
+    <Content Include="Views\CadEstabelecimentos\Details.cshtml" />
+    <Content Include="Views\CadEstabelecimentos\Edit.cshtml" />
+    <Content Include="Views\CadEstabelecimentos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -216,8 +223,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201903210103002_cliente.resx">
-      <DependentUpon>201903210103002_cliente.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201903232003298_run.resx">
+      <DependentUpon>201903232003298_run.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
