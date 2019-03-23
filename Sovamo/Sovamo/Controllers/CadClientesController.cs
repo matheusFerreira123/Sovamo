@@ -8,10 +8,14 @@ using System.Web;
 using System.Web.Mvc;
 using Sovamo.Models;
 
+
 namespace Sovamo.Controllers
 {
+
+
     public class CadClientesController : Controller
     {
+
         private Context db = new Context();
 
         // GET: CadClientes
@@ -50,6 +54,7 @@ namespace Sovamo.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ClienteId,Nome,Cpf,Rg,Telefone,Estado,Cidade,Rua,Numero,Email,Senha")] CadCliente cadCliente)
         {
+
             if (ModelState.IsValid)
             {
                 db.CadClientes.Add(cadCliente);
