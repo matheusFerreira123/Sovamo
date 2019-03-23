@@ -3,7 +3,7 @@ namespace Sovamo.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class run : DbMigration
+    public partial class a : DbMigration
     {
         public override void Up()
         {

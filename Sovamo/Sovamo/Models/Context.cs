@@ -18,5 +18,7 @@ namespace Sovamo.Models
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder) { modelBuilder.Conventions.Remove(); modelBuilder.Conventions.Remove<PluralizingTableNameConvention>(); }
+
+        public System.Data.Entity.DbSet<Sovamo.Models.Evento> Eventoes { get; set; }
     }
 }
