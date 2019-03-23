@@ -6,14 +6,14 @@ namespace Sovamo.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    [GeneratedCode("EntityFramework.Migrations", "6.0.0-20911")]
-    public sealed partial class xyz : IMigrationMetadata
+    [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
+    public sealed partial class cliente : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(xyz));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(cliente));
         
         string IMigrationMetadata.Id
         {
-            get { return "201903200254518_xyz"; }
+            get { return "201903210103002_cliente"; }
         }
         
         string IMigrationMetadata.Source

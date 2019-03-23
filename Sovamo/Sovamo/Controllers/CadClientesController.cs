@@ -23,11 +23,13 @@ namespace Sovamo.Controllers
         // GET: CadClientes/Details/5
         public ActionResult Details(int? id)
         {
+            
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            CadCliente cadCliente = db.CadClientes.Find(id);
+            CadCliente cadCliente = db.CadClientes.OrderByDescending(d=>d.ClienteId==id).First();
+
             if (cadCliente == null)
             {
                 return HttpNotFound();
@@ -46,14 +48,16 @@ namespace Sovamo.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ClienteId,Email,Cnpj,Senha")] CadCliente cadCliente)
+        public ActionResult Create([Bind(Include = "ClienteId,Nome,Cpf,Rg,Telefone,Estado,Cidade,Rua,Numero,Email,Senha")] CadCliente cadCliente)
         {
             if (ModelState.IsValid)
             {
                 db.CadClientes.Add(cadCliente);
                 db.SaveChanges();
+                
                 return RedirectToAction("Index");
             }
+            
 
             return View(cadCliente);
         }
@@ -78,7 +82,7 @@ namespace Sovamo.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ClienteId,Email,Cnpj,Senha")] CadCliente cadCliente)
+        public ActionResult Edit([Bind(Include = "ClienteId,Nome,Cpf,Rg,Telefone,Estado,Cidade,Rua,Numero,Email,Senha")] CadCliente cadCliente)
         {
             if (ModelState.IsValid)
             {
@@ -88,6 +92,10 @@ namespace Sovamo.Controllers
             }
             return View(cadCliente);
         }
+
+        
+
+
 
         // GET: CadClientes/Delete/5
         public ActionResult Delete(int? id)
