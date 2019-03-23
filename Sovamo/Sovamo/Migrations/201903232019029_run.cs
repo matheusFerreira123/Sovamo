@@ -3,7 +3,7 @@ namespace Sovamo.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class cliente : DbMigration
+    public partial class run : DbMigration
     {
         public override void Up()
         {
@@ -25,10 +25,24 @@ namespace Sovamo.Migrations
                     })
                 .PrimaryKey(t => t.ClienteId);
             
+            CreateTable(
+                "dbo.CadUsuario",
+                c => new
+                    {
+                        ClienteID = c.Int(nullable: false, identity: true),
+                        Nome = c.String(nullable: false, maxLength: 100, storeType: "nvarchar"),
+                        Email = c.String(nullable: false, unicode: false),
+                        Telefone = c.String(unicode: false),
+                        Senha = c.String(nullable: false, unicode: false),
+                        EstiloMusical = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.ClienteID);
+            
         }
         
         public override void Down()
         {
+            DropTable("dbo.CadUsuario");
             DropTable("dbo.CadCliente");
         }
     }

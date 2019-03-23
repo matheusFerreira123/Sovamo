@@ -13,6 +13,8 @@ namespace Sovamo.Models
 
 
         public DbSet<CadCliente> CadClientes { get; set; }
+        public DbSet<CadUsuario> CadUsuario { get; set; }
+
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder) { modelBuilder.Conventions.Remove(); modelBuilder.Conventions.Remove<PluralizingTableNameConvention>(); }

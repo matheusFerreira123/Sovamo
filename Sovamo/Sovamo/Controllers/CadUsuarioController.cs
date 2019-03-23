@@ -10,116 +10,107 @@ using Sovamo.Models;
 
 namespace Sovamo.Controllers
 {
-    public class CadClientesController : Controller
+    public class CadUsuarioController : Controller
     {
         private Context db = new Context();
 
-        // GET: CadClientes
+        // GET: CadUsuario
         public ActionResult Index()
         {
-            return View(db.CadClientes.ToList());
+            return View(db.CadUsuario.ToList());
         }
 
-        // GET: CadClientes/Details/5
+        // GET: CadUsuario/Details/5
         public ActionResult Details(int? id)
         {
-            
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            CadCliente cadCliente = db.CadClientes.OrderByDescending(d=>d.ClienteId==id).First();
-
-            if (cadCliente == null)
+            CadUsuario cadUsuario = db.CadUsuario.Find(id);
+            if (cadUsuario == null)
             {
                 return HttpNotFound();
             }
-            return View(cadCliente);
+            return View(cadUsuario);
         }
 
-        // GET: CadClientes/Create
+        // GET: CadUsuario/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: CadClientes/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: CadUsuario/Create
+        // Para se proteger de mais ataques, ative as propriedades específicas a que você quer se conectar. Para 
+        // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ClienteId,Nome,Cpf,Rg,Telefone,Estado,Cidade,Rua,Numero,Email,Senha")] CadCliente cadCliente)
+        public ActionResult Create([Bind(Include = "ClienteID,Nome,Email,Telefone,Senha,EstiloMusical")] CadUsuario cadUsuario)
         {
             if (ModelState.IsValid)
             {
-
-                db.CadClientes.Add(cadCliente);
+                db.CadUsuario.Add(cadUsuario);
                 db.SaveChanges();
-                
                 return RedirectToAction("Index");
             }
-            
 
-            return View(cadCliente);
+            return View(cadUsuario);
         }
 
-        // GET: CadClientes/Edit/5
+        // GET: CadUsuario/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            CadCliente cadCliente = db.CadClientes.Find(id);
-            if (cadCliente == null)
+            CadUsuario cadUsuario = db.CadUsuario.Find(id);
+            if (cadUsuario == null)
             {
                 return HttpNotFound();
             }
-            return View(cadCliente);
+            return View(cadUsuario);
         }
 
-        // POST: CadClientes/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: CadUsuario/Edit/5
+        // Para se proteger de mais ataques, ative as propriedades específicas a que você quer se conectar. Para 
+        // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ClienteId,Nome,Cpf,Rg,Telefone,Estado,Cidade,Rua,Numero,Email,Senha")] CadCliente cadCliente)
+        public ActionResult Edit([Bind(Include = "ClienteID,Nome,Email,Telefone,Senha,EstiloMusical")] CadUsuario cadUsuario)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(cadCliente).State = EntityState.Modified;
+                db.Entry(cadUsuario).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(cadCliente);
+            return View(cadUsuario);
         }
 
-        
-
-
-
-        // GET: CadClientes/Delete/5
+        // GET: CadUsuario/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            CadCliente cadCliente = db.CadClientes.Find(id);
-            if (cadCliente == null)
+            CadUsuario cadUsuario = db.CadUsuario.Find(id);
+            if (cadUsuario == null)
             {
                 return HttpNotFound();
             }
-            return View(cadCliente);
+            return View(cadUsuario);
         }
 
-        // POST: CadClientes/Delete/5
+        // POST: CadUsuario/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            CadCliente cadCliente = db.CadClientes.Find(id);
-            db.CadClientes.Remove(cadCliente);
+            CadUsuario cadUsuario = db.CadUsuario.Find(id);
+            db.CadUsuario.Remove(cadUsuario);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
