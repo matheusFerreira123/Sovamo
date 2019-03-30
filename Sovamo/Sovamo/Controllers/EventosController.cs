@@ -46,7 +46,7 @@ namespace Sovamo.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "EventoId,Nome,Atracao,Estilo,Descricao")] Evento evento)
+        public ActionResult Create([Bind(Include = "EventoId,Nome,Atracao,EstiloMusical,Descricao")] Evento evento)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace Sovamo.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "EventoId,Nome,Atracao,Estilo,Descricao")] Evento evento)
+        public ActionResult Edit([Bind(Include = "EventoId,Nome,Atracao,EstiloMusical,Descricao")] Evento evento)
         {
             if (ModelState.IsValid)
             {

@@ -13,7 +13,7 @@ namespace Sovamo.Models
         public int EventoId { get; set; }
         public string Nome { get; set; }
         public string Atracao { get; set; }
-        public string Estilo { get; set; }
+        public EstiloMusical EstiloMusical { get; set; }
         public string Descricao { get; set; }
     }
 }
