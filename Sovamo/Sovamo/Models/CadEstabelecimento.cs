@@ -13,11 +13,13 @@ namespace Sovamo.Models
         public int EstabelecimentoId { get; set; }
         public string Nome { get; set; }
         public string Razao { get; set; }
+        public string CpfCliente { get; set; }
         public string Cnpj { get; set; }
         public string Endereço { get; set; }
         public string Telefone { get; set; }
-        public string Descrição { get; set; }
-        public string horario{ get; set; }
+        public string Descricão { get; set; }
+        public string horario { get; set; }
 
     }
+    
 }

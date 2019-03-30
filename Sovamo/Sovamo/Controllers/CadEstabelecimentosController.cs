@@ -17,8 +17,10 @@ namespace Sovamo.Controllers
         // GET: CadEstabelecimentos
         public ActionResult Index()
         {
+            
             return View(db.CadEstabelecimentos.ToList());
         }
+
 
         // GET: CadEstabelecimentos/Details/5
         public ActionResult Details(int? id)
