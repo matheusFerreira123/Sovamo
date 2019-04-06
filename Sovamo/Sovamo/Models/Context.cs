@@ -7,18 +7,28 @@ using System.Web;
 
 namespace Sovamo.Models
 {
+    //Context db = new Context();
+    //ViewBag.situa = new SelectList(db.Uf, "Id", "Initials");
     public class Context : DbContext
     {
         public Context() : base("Sovamo") { Configuration.ProxyCreationEnabled = false; Database.SetInitializer(new DropCreateDatabaseIfModelChanges<Context>()); }
 
 
-        public DbSet<CadCliente> CadClientes { get; set; }
-        public DbSet<CadUsuario> CadUsuario { get; set; }
 
+
+
+        public DbSet<CadCliente> CadClientes { get; set; }
+        public DbSet<CadEstabelecimento> CadEstabelecimentoes { get; set; }
+        
+
+
+
+        //public DbSet<CadUsuario> CadUsuario { get; set; }
+        //public System.Data.Entity.DbSet<Sovamo.Models.Evento> Eventoes { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder) { modelBuilder.Conventions.Remove(); modelBuilder.Conventions.Remove<PluralizingTableNameConvention>(); }
 
-        public System.Data.Entity.DbSet<Sovamo.Models.Evento> Eventoes { get; set; }
+        
     }
 }

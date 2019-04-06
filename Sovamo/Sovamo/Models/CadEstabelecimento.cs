@@ -19,7 +19,9 @@ namespace Sovamo.Models
         public string Telefone { get; set; }
         public string Descricão { get; set; }
         public string horario { get; set; }
+        [Display(Name = "Situação")]
+        public Situacao Situacao { get; set; }
+
 
     }
-    
 }

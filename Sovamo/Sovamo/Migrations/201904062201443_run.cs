@@ -38,6 +38,7 @@ namespace Sovamo.Migrations
                         Telefone = c.String(unicode: false),
                         Descricão = c.String(unicode: false),
                         horario = c.String(unicode: false),
+                        Situacao = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.EstabelecimentoId);
             

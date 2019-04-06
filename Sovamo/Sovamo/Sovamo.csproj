@@ -138,20 +138,20 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\CadClientesController.cs" />
-    <Compile Include="Controllers\CadEstabelecimentosController.cs" />
+    <Compile Include="Controllers\CadEstabelecimentoesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201903270243471_run.cs" />
-    <Compile Include="Migrations\201903270243471_run.Designer.cs">
-      <DependentUpon>201903270243471_run.cs</DependentUpon>
+    <Compile Include="Migrations\201904062201443_run.cs" />
+    <Compile Include="Migrations\201904062201443_run.Designer.cs">
+      <DependentUpon>201904062201443_run.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CadCliente.cs" />
     <Compile Include="Models\CadEstabelecimento.cs" />
     <Compile Include="Models\Context.cs" />
+    <Compile Include="Models\Situacao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -206,17 +206,17 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutCliente.cshtml" />
     <Content Include="Views\CadClientes\Create.cshtml" />
     <Content Include="Views\CadClientes\Delete.cshtml" />
     <Content Include="Views\CadClientes\Details.cshtml" />
     <Content Include="Views\CadClientes\Edit.cshtml" />
     <Content Include="Views\CadClientes\Index.cshtml" />
-    <Content Include="Views\CadEstabelecimentos\Create.cshtml" />
-    <Content Include="Views\CadEstabelecimentos\Delete.cshtml" />
-    <Content Include="Views\CadEstabelecimentos\Details.cshtml" />
-    <Content Include="Views\CadEstabelecimentos\Edit.cshtml" />
-    <Content Include="Views\CadEstabelecimentos\Index.cshtml" />
-    <Content Include="Views\Shared\_LayoutCliente.cshtml" />
+    <Content Include="Views\CadEstabelecimentoes\Create.cshtml" />
+    <Content Include="Views\CadEstabelecimentoes\Delete.cshtml" />
+    <Content Include="Views\CadEstabelecimentoes\Details.cshtml" />
+    <Content Include="Views\CadEstabelecimentoes\Edit.cshtml" />
+    <Content Include="Views\CadEstabelecimentoes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -236,8 +236,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201903270243471_run.resx">
-      <DependentUpon>201903270243471_run.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904062201443_run.resx">
+      <DependentUpon>201904062201443_run.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
