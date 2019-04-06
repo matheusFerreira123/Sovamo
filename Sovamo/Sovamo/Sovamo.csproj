@@ -139,22 +139,19 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CadClientesController.cs" />
-    <Compile Include="Controllers\CadUsuarioController.cs" />
-    <Compile Include="Controllers\EventosController.cs" />
+    <Compile Include="Controllers\CadEstabelecimentosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201904061656249_a.cs" />
-    <Compile Include="Migrations\201904061656249_a.Designer.cs">
-      <DependentUpon>201904061656249_a.cs</DependentUpon>
+    <Compile Include="Migrations\201903270243471_run.cs" />
+    <Compile Include="Migrations\201903270243471_run.Designer.cs">
+      <DependentUpon>201903270243471_run.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CadCliente.cs" />
-    <Compile Include="Models\CadUsuario.cs" />
+    <Compile Include="Models\CadEstabelecimento.cs" />
     <Compile Include="Models\Context.cs" />
-    <Compile Include="Models\EstiloMusical.cs" />
-    <Compile Include="Models\Evento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -162,6 +159,18 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\15895471_233176057131415_941627293008824202_o.jpg" />
+    <Content Include="Content\Images\adicionar.png" />
+    <Content Include="Content\Images\ativar.png" />
+    <Content Include="Content\Images\cancelar.png" />
+    <Content Include="Content\Images\desativar.png" />
+    <Content Include="Content\Images\detalhes.png" />
+    <Content Include="Content\Images\editar.png" />
+    <Content Include="Content\Images\excluir.png" />
+    <Content Include="Content\Images\farraial.jpg" />
+    <Content Include="Content\Images\MAIARA-E-MARAISA-SAO-JOAO-IPIRA-VR14.jpg" />
+    <Content Include="Content\Images\voltar.png" />
+    <Content Include="Content\Images\WESLEY-SAFADAO-DIVINA-EXPO-MG-inbrand-fotografia-publicidade-propaganda-sao-goncalo.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -174,6 +183,8 @@
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.mask.js" />
+    <Content Include="Scripts\jquery.mask.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -200,19 +211,16 @@
     <Content Include="Views\CadClientes\Details.cshtml" />
     <Content Include="Views\CadClientes\Edit.cshtml" />
     <Content Include="Views\CadClientes\Index.cshtml" />
-    <Content Include="Views\CadUsuario\Create.cshtml" />
-    <Content Include="Views\CadUsuario\Delete.cshtml" />
-    <Content Include="Views\CadUsuario\Details.cshtml" />
-    <Content Include="Views\CadUsuario\Edit.cshtml" />
-    <Content Include="Views\CadUsuario\Index.cshtml" />
-    <Content Include="Views\Eventos\Create.cshtml" />
-    <Content Include="Views\Eventos\Delete.cshtml" />
-    <Content Include="Views\Eventos\Details.cshtml" />
-    <Content Include="Views\Eventos\Edit.cshtml" />
-    <Content Include="Views\Eventos\Index.cshtml" />
+    <Content Include="Views\CadEstabelecimentos\Create.cshtml" />
+    <Content Include="Views\CadEstabelecimentos\Delete.cshtml" />
+    <Content Include="Views\CadEstabelecimentos\Details.cshtml" />
+    <Content Include="Views\CadEstabelecimentos\Edit.cshtml" />
+    <Content Include="Views\CadEstabelecimentos\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutCliente.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="jQuery-Mask-Plugin-master\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -228,8 +236,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904061656249_a.resx">
-      <DependentUpon>201904061656249_a.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201903270243471_run.resx">
+      <DependentUpon>201903270243471_run.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

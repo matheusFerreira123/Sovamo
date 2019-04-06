@@ -11,6 +11,7 @@ using Sovamo.Models;
 
 namespace Sovamo.Controllers
 {
+    
 
 
     public class CadClientesController : Controller
@@ -27,7 +28,6 @@ namespace Sovamo.Controllers
         // GET: CadClientes/Details/5
         public ActionResult Details(int? id)
         {
-            
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -47,6 +47,7 @@ namespace Sovamo.Controllers
             return View();
         }
 
+        
         // POST: CadClientes/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
@@ -54,19 +55,23 @@ namespace Sovamo.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ClienteId,Nome,Cpf,Rg,Telefone,Estado,Cidade,Rua,Numero,Email,Senha")] CadCliente cadCliente)
         {
+            
 
             if (ModelState.IsValid)
             {
-
+                
                 db.CadClientes.Add(cadCliente);
                 db.SaveChanges();
                 
                 return RedirectToAction("Index");
             }
             
+            
 
             return View(cadCliente);
         }
+
+        
 
         // GET: CadClientes/Edit/5
         public ActionResult Edit(int? id)
