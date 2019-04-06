@@ -24,7 +24,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Atracao, htmlAttributes: new { @class = "control-label col-md-2" }, labelText: "Atração")
+            @Html.LabelFor(model => model.Atracao, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Atracao, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Atracao, "", new { @class = "text-danger" })
@@ -32,7 +32,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.EstiloMusical, htmlAttributes: new { @class = "control-label col-md-2" }, labelText: "Estilo Musical")
+            @Html.LabelFor(model => model.EstiloMusical, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EnumDropDownListFor(model => model.EstiloMusical, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.EstiloMusical, "", new { @class = "text-danger" })
@@ -40,10 +40,18 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Descricao, htmlAttributes: new { @class = "control-label col-md-2" }, labelText: "Descrição")
+            @Html.LabelFor(model => model.Descricao, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Descricao, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Descricao, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Dia, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Dia, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Dia, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -56,7 +64,7 @@
 }
 
 <div>
-    @Html.ActionLink("Voltar para a lista", "Index")
+    @Html.ActionLink("Back to List", "Index")
 </div>
 
 @section Scripts {

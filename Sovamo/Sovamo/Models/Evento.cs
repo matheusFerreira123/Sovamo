@@ -15,5 +15,6 @@ namespace Sovamo.Models
         public string Atracao { get; set; }
         public EstiloMusical EstiloMusical { get; set; }
         public string Descricao { get; set; }
+        public DateTime Dia { get; set; }
     }
 }
