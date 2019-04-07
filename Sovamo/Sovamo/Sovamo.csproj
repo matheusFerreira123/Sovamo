@@ -138,19 +138,25 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CadClientesController.cs" />
     <Compile Include="Controllers\CadEstabelecimentoesController.cs" />
+    <Compile Include="Controllers\CadUsuariosController.cs" />
+    <Compile Include="Controllers\EventoesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201904062201443_run.cs" />
-    <Compile Include="Migrations\201904062201443_run.Designer.cs">
-      <DependentUpon>201904062201443_run.cs</DependentUpon>
+    <Compile Include="Migrations\201904071940341_sovai.cs" />
+    <Compile Include="Migrations\201904071940341_sovai.Designer.cs">
+      <DependentUpon>201904071940341_sovai.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CadCliente.cs" />
     <Compile Include="Models\CadEstabelecimento.cs" />
+    <Compile Include="Models\CadUsuario.cs" />
     <Compile Include="Models\Context.cs" />
+    <Compile Include="Models\EstiloMusical.cs" />
+    <Compile Include="Models\Evento.cs" />
     <Compile Include="Models\Situacao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -217,6 +223,21 @@
     <Content Include="Views\CadEstabelecimentoes\Details.cshtml" />
     <Content Include="Views\CadEstabelecimentoes\Edit.cshtml" />
     <Content Include="Views\CadEstabelecimentoes\Index.cshtml" />
+    <Content Include="Views\CadUsuario\Create.cshtml" />
+    <Content Include="Views\CadUsuario\Delete.cshtml" />
+    <Content Include="Views\CadUsuario\Details.cshtml" />
+    <Content Include="Views\CadUsuario\Edit.cshtml" />
+    <Content Include="Views\CadUsuario\Index.cshtml" />
+    <Content Include="Views\CadUsuarios\Create.cshtml" />
+    <Content Include="Views\CadUsuarios\Delete.cshtml" />
+    <Content Include="Views\CadUsuarios\Details.cshtml" />
+    <Content Include="Views\CadUsuarios\Edit.cshtml" />
+    <Content Include="Views\CadUsuarios\Index.cshtml" />
+    <Content Include="Views\Eventoes\Create.cshtml" />
+    <Content Include="Views\Eventoes\Delete.cshtml" />
+    <Content Include="Views\Eventoes\Details.cshtml" />
+    <Content Include="Views\Eventoes\Edit.cshtml" />
+    <Content Include="Views\Eventoes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -236,8 +257,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904062201443_run.resx">
-      <DependentUpon>201904062201443_run.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904071940341_sovai.resx">
+      <DependentUpon>201904071940341_sovai.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

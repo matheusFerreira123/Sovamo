@@ -19,12 +19,8 @@ namespace Sovamo.Models
 
         public DbSet<CadCliente> CadClientes { get; set; }
         public DbSet<CadEstabelecimento> CadEstabelecimentoes { get; set; }
-        
-
-
-
-        //public DbSet<CadUsuario> CadUsuario { get; set; }
-        //public System.Data.Entity.DbSet<Sovamo.Models.Evento> Eventoes { get; set; }
+        public DbSet<CadUsuario> CadUsuarios { get; set; }
+        public DbSet<Sovamo.Models.Evento> Eventoes { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder) { modelBuilder.Conventions.Remove(); modelBuilder.Conventions.Remove<PluralizingTableNameConvention>(); }

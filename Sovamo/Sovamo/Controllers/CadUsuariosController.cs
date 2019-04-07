@@ -10,24 +10,24 @@ using Sovamo.Models;
 
 namespace Sovamo.Controllers
 {
-    public class CadUsuarioController : Controller
+    public class CadUsuariosController : Controller
     {
         private Context db = new Context();
 
-        // GET: CadUsuario
+        // GET: CadUsuarios
         public ActionResult Index()
         {
-            return View(db.CadUsuario.ToList());
+            return View(db.CadUsuarios.ToList());
         }
 
-        // GET: CadUsuario/Details/5
+        // GET: CadUsuarios/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            CadUsuario cadUsuario = db.CadUsuario.Find(id);
+            CadUsuario cadUsuario = db.CadUsuarios.Find(id);
             if (cadUsuario == null)
             {
                 return HttpNotFound();
@@ -35,22 +35,22 @@ namespace Sovamo.Controllers
             return View(cadUsuario);
         }
 
-        // GET: CadUsuario/Create
+        // GET: CadUsuarios/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: CadUsuario/Create
-        // Para se proteger de mais ataques, ative as propriedades específicas a que você quer se conectar. Para 
-        // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: CadUsuarios/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ClienteID,Nome,Email,Telefone,Senha,EstiloMusical")] CadUsuario cadUsuario)
         {
             if (ModelState.IsValid)
             {
-                db.CadUsuario.Add(cadUsuario);
+                db.CadUsuarios.Add(cadUsuario);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -58,14 +58,14 @@ namespace Sovamo.Controllers
             return View(cadUsuario);
         }
 
-        // GET: CadUsuario/Edit/5
+        // GET: CadUsuarios/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            CadUsuario cadUsuario = db.CadUsuario.Find(id);
+            CadUsuario cadUsuario = db.CadUsuarios.Find(id);
             if (cadUsuario == null)
             {
                 return HttpNotFound();
@@ -73,9 +73,9 @@ namespace Sovamo.Controllers
             return View(cadUsuario);
         }
 
-        // POST: CadUsuario/Edit/5
-        // Para se proteger de mais ataques, ative as propriedades específicas a que você quer se conectar. Para 
-        // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: CadUsuarios/Edit/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ClienteID,Nome,Email,Telefone,Senha,EstiloMusical")] CadUsuario cadUsuario)
@@ -89,14 +89,14 @@ namespace Sovamo.Controllers
             return View(cadUsuario);
         }
 
-        // GET: CadUsuario/Delete/5
+        // GET: CadUsuarios/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            CadUsuario cadUsuario = db.CadUsuario.Find(id);
+            CadUsuario cadUsuario = db.CadUsuarios.Find(id);
             if (cadUsuario == null)
             {
                 return HttpNotFound();
@@ -104,13 +104,13 @@ namespace Sovamo.Controllers
             return View(cadUsuario);
         }
 
-        // POST: CadUsuario/Delete/5
+        // POST: CadUsuarios/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            CadUsuario cadUsuario = db.CadUsuario.Find(id);
-            db.CadUsuario.Remove(cadUsuario);
+            CadUsuario cadUsuario = db.CadUsuarios.Find(id);
+            db.CadUsuarios.Remove(cadUsuario);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

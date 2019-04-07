@@ -10,107 +10,107 @@ using Sovamo.Models;
 
 namespace Sovamo.Controllers
 {
-    public class EventosController : Controller
+    public class CadClientesController : Controller
     {
         private Context db = new Context();
 
-        // GET: Eventos
+        // GET: CadClientes
         public ActionResult Index()
         {
-            return View(db.Eventoes.OrderBy(o => o.Dia));
+            return View(db.CadClientes.ToList());
         }
 
-        // GET: Eventos/Details/5
+        // GET: CadClientes/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Evento evento = db.Eventoes.Find(id);
-            if (evento == null)
+            CadCliente cadCliente = db.CadClientes.Find(id);
+            if (cadCliente == null)
             {
                 return HttpNotFound();
             }
-            return View(evento);
+            return View(cadCliente);
         }
 
-        // GET: Eventos/Create
+        // GET: CadClientes/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Eventos/Create
+        // POST: CadClientes/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "EventoId,Nome,Atracao,EstiloMusical,Descricao,Dia")] Evento evento)
+        public ActionResult Create([Bind(Include = "ClienteId,Nome,Cpf,Rg,Telefone,Estado,Cidade,Rua,Numero,Email,Senha")] CadCliente cadCliente)
         {
             if (ModelState.IsValid)
             {
-                db.Eventoes.Add(evento);
+                db.CadClientes.Add(cadCliente);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(evento);
+            return View(cadCliente);
         }
 
-        // GET: Eventos/Edit/5
+        // GET: CadClientes/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Evento evento = db.Eventoes.Find(id);
-            if (evento == null)
+            CadCliente cadCliente = db.CadClientes.Find(id);
+            if (cadCliente == null)
             {
                 return HttpNotFound();
             }
-            return View(evento);
+            return View(cadCliente);
         }
 
-        // POST: Eventos/Edit/5
+        // POST: CadClientes/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "EventoId,Nome,Atracao,EstiloMusical,Descricao,Dia")] Evento evento)
+        public ActionResult Edit([Bind(Include = "ClienteId,Nome,Cpf,Rg,Telefone,Estado,Cidade,Rua,Numero,Email,Senha")] CadCliente cadCliente)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(evento).State = EntityState.Modified;
+                db.Entry(cadCliente).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(evento);
+            return View(cadCliente);
         }
 
-        // GET: Eventos/Delete/5
+        // GET: CadClientes/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Evento evento = db.Eventoes.Find(id);
-            if (evento == null)
+            CadCliente cadCliente = db.CadClientes.Find(id);
+            if (cadCliente == null)
             {
                 return HttpNotFound();
             }
-            return View(evento);
+            return View(cadCliente);
         }
 
-        // POST: Eventos/Delete/5
+        // POST: CadClientes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Evento evento = db.Eventoes.Find(id);
-            db.Eventoes.Remove(evento);
+            CadCliente cadCliente = db.CadClientes.Find(id);
+            db.CadClientes.Remove(cadCliente);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
