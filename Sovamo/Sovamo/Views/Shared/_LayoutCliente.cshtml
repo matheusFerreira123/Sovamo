@@ -1,4 +1,7 @@
 ﻿
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +10,14 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
+    <style type="text/css">
+        #btnParticipar {
+            display: none
+        }
+    </style>
 </head>
+
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -49,8 +59,9 @@
                                     Estabelecimentos
                                 </button>
                                 <div class="dropdown-menu">
+
                                     @Html.ActionLink("Meus Estabelecimentos", "Index", "CadEstabelecimentoes", null, new { @class = "btn btn-secondary" })
-                                    @Html.ActionLink("Adicionar Estabelecimento", "Create", "CadEstabelecimentoes", null, new { @class = "btn btn-secondary" })
+                                    @Html.ActionLink("Adicionar Estabelecimento", "Create", "CadEstabelecimentoes", null, new { @class = "btn btn-secondary" }) 
 
                                 </div>
                             </div>
@@ -64,7 +75,7 @@
 
                                 </div>
                             </div>
-                            <li>@Html.ActionLink("OpcSituacaos", "Index", "OpcSituacaos")</li>
+                            
 
                         </div>
 

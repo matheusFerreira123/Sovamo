@@ -17,6 +17,7 @@ namespace Sovamo.Controllers
         // GET: CadEstabelecimentoes
         public ActionResult Index()
         {
+
             return View(db.CadEstabelecimentoes.ToList());
         }
 
@@ -32,6 +33,7 @@ namespace Sovamo.Controllers
             {
                 return HttpNotFound();
             }
+          //  CadEstabelecimento CadEstabelecimento = (CadEstabelecimento)db.CadEstabelecimentoes.Find(id);
             return View(cadEstabelecimento);
         }
 
@@ -46,6 +48,7 @@ namespace Sovamo.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        
         public ActionResult Create([Bind(Include = "EstabelecimentoId,Nome,Razao,CpfCliente,Cnpj,Endereço,Telefone,Descricão,horario,Situacao")] CadEstabelecimento cadEstabelecimento)
         {
             if (ModelState.IsValid)

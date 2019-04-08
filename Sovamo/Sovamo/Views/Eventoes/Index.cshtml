@@ -4,11 +4,15 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<script type="text/javascript">
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+
+</script>
+
+
+<h2>Meus Eventos</h2>
+
+
 <table class="table">
     <tr>
         <th>
@@ -29,29 +33,38 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Atracao)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EstiloMusical)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Descricao)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Dia)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.EventoId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.EventoId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.EventoId })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Atracao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstiloMusical)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dia)
+            </td>
+            <td>
+                <div id="escondeUsuario">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.EventoId, }, new { @class = "btn btn-primary" })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.EventoId }, new { @class = "btn btn-danger" }) |
+                </div>
+                <input type="button" id="btnHabilitasorteio" class="btn btn-primary" value="Disponibilizar para sorteio" />
+                <input type="button" id="btnParticipar" class="btn btn-success" value="Participar" />
+
+            </td>
+
+        </tr>
+        
+
+    }
+
 
 </table>

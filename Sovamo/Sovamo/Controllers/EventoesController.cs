@@ -58,6 +58,8 @@ namespace Sovamo.Controllers
             return View(evento);
         }
 
+       
+
         // GET: Eventoes/Edit/5
         public ActionResult Edit(int? id)
         {
