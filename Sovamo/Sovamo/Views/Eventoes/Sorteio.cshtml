@@ -1,10 +1,11 @@
-﻿@model IEnumerable<Sovamo.Models.Evento>
+﻿
+@model IEnumerable<Sovamo.Models.Evento>
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Meus Eventos</h2>
+<h2>Disponível para sorteio</h2>
 
 
 <table class="table">
@@ -24,9 +25,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Dia)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Dispsorteio)
-        </th>
+        
         <th></th>
     </tr>
 
@@ -47,15 +46,9 @@
         <td>
             @Html.DisplayFor(modelItem => item.Dia)
         </td>
+        
         <td>
-            @Html.DisplayFor(modelItem => item.Dispsorteio)
-        </td>
-        <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.EventoId }, new {@class = "btn btn-primary" }) 
-            
-            @Html.ActionLink("Excluir", "Delete", new { id=item.EventoId }, new { @class = "btn btn-danger" })
-
-            <input type="button" class="btn btn-success" id="btnParticipar" value="Participar" />
+            <input type="button" id="participar" class="btn btn-success" value="Participar" />
         </td>
     </tr>
 }

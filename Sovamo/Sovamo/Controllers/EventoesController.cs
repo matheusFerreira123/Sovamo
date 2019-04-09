@@ -20,6 +20,11 @@ namespace Sovamo.Controllers
             return View(db.Eventoes.ToList());
         }
 
+        //public ActionResult Sorteio()
+        //{
+        //    return View(db.Eventoes.ToList().Where(o => o.Dispsorteio = "Sim"));
+        //}
+
         // GET: Eventoes/Details/5
         public ActionResult Details(int? id)
         {
@@ -46,7 +51,7 @@ namespace Sovamo.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "EventoId,Nome,Atracao,EstiloMusical,Descricao,Dia")] Evento evento)
+        public ActionResult Create([Bind(Include = "EventoId,Nome,Atracao,EstiloMusical,Descricao,Dia,Dispsorteio")] Evento evento)
         {
             if (ModelState.IsValid)
             {
@@ -57,8 +62,6 @@ namespace Sovamo.Controllers
 
             return View(evento);
         }
-
-       
 
         // GET: Eventoes/Edit/5
         public ActionResult Edit(int? id)
@@ -80,7 +83,7 @@ namespace Sovamo.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "EventoId,Nome,Atracao,EstiloMusical,Descricao,Dia")] Evento evento)
+        public ActionResult Edit([Bind(Include = "EventoId,Nome,Atracao,EstiloMusical,Descricao,Dia,Dispsorteio")] Evento evento)
         {
             if (ModelState.IsValid)
             {

@@ -2,11 +2,10 @@
 
 @{
     ViewBag.Title = "Index";
-
 }
 
 <h2>Meus Estabelecimentos</h2>
-
+<br />
 
 
 <table class="table">
@@ -71,8 +70,9 @@
             @Html.DisplayFor(modelItem => item.Situacao)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.EstabelecimentoId }, new { @class = "btn btn-primary" }) 
-            @Html.ActionLink("Delete", "Delete", new { id=item.EstabelecimentoId }, new { @class = "btn btn-danger" })
+            @Html.ActionLink("Editar", "Edit", new { id=item.EstabelecimentoId }, new { @class = "btn btn-primary" }) 
+            
+            @Html.ActionLink("Excluir", "Delete", new { id=item.EstabelecimentoId }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }
