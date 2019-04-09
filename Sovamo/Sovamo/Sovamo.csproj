@@ -143,12 +143,13 @@
     <Compile Include="Controllers\CadUsuariosController.cs" />
     <Compile Include="Controllers\EventoesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PublicoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201904071940341_sovai.cs" />
-    <Compile Include="Migrations\201904071940341_sovai.Designer.cs">
-      <DependentUpon>201904071940341_sovai.cs</DependentUpon>
+    <Compile Include="Migrations\201904082315257_a.cs" />
+    <Compile Include="Migrations\201904082315257_a.Designer.cs">
+      <DependentUpon>201904082315257_a.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CadCliente.cs" />
@@ -159,6 +160,7 @@
     <Compile Include="Models\Evento.cs" />
     <Compile Include="Models\Situacao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Funcoes.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -196,6 +198,8 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_layoutUser.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -208,11 +212,9 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Shared\_LayoutCliente.cshtml" />
     <Content Include="Views\CadClientes\Create.cshtml" />
     <Content Include="Views\CadClientes\Delete.cshtml" />
     <Content Include="Views\CadClientes\Details.cshtml" />
@@ -238,6 +240,9 @@
     <Content Include="Views\Eventoes\Details.cshtml" />
     <Content Include="Views\Eventoes\Edit.cshtml" />
     <Content Include="Views\Eventoes\Index.cshtml" />
+    <Content Include="Views\Publico\Logar.cshtml" />
+    <Content Include="Views\Publico\AcessoNegado.cshtml" />
+    <Content Include="Views\Shared\_LayoutCliente.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -257,8 +262,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904071940341_sovai.resx">
-      <DependentUpon>201904071940341_sovai.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904082315257_a.resx">
+      <DependentUpon>201904082315257_a.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
