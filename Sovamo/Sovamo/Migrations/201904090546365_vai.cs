@@ -3,7 +3,7 @@ namespace Sovamo.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class a : DbMigration
+    public partial class vai : DbMigration
     {
         public override void Up()
         {
@@ -65,6 +65,7 @@ namespace Sovamo.Migrations
                         EstiloMusical = c.Int(nullable: false),
                         Descricao = c.String(unicode: false),
                         Dia = c.DateTime(nullable: false, precision: 0),
+                        Dispsorteio = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.EventoId);
             

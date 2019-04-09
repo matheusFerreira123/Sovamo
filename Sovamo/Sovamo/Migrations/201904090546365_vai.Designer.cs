@@ -7,13 +7,13 @@ namespace Sovamo.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class a : IMigrationMetadata
+    public sealed partial class vai : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(a));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(vai));
         
         string IMigrationMetadata.Id
         {
-            get { return "201904082315257_a"; }
+            get { return "201904090546365_vai"; }
         }
         
         string IMigrationMetadata.Source

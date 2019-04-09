@@ -4,7 +4,7 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+<h2>Adcionar Evento</h2>
 
 @using (Html.BeginForm()) 
 {
@@ -51,6 +51,14 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Dia, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Dia, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Dispsorteio, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EnumDropDownListFor(model => model.Dispsorteio, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Dispsorteio, "", new { @class = "text-danger" })
             </div>
         </div>
 
