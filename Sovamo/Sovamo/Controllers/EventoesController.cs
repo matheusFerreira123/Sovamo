@@ -20,10 +20,10 @@ namespace Sovamo.Controllers
             return View(db.Eventoes.ToList());
         }
 
-        //public ActionResult Sorteio()
-        //{
-        //    return View(db.Eventoes.ToList().Where(o => o.Dispsorteio = "Sim"));
-        //}
+        public ActionResult Sorteio()
+        {
+            return View(db.Eventoes.ToList().Where(o => o.Dispsorteio == 0));
+        }
 
         // GET: Eventoes/Details/5
         public ActionResult Details(int? id)
