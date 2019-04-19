@@ -5,6 +5,12 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <style type="text/css">
+        #btnssome {
+            display: none
+        }
+    </style>
+
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -23,10 +29,29 @@
                     @*<li>@Html.ActionLink("Sobre", "About", "Publico")</li>*@
                 </ul>
             </div>
+            @Html.ActionLink("Eventos com sorteio", "Sorteio", "Eventoes", null, new { @class = "btn btn-primary" })
+            <div class="btn-group dropright">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Filtro por estilo
+                </button>
+                <div class="dropdown-menu">
+
+                    @Html.ActionLink("Eletrônica", "Eletronica", "Eventoes", null, new { @class = "btn btn-secondary" })
+                    @Html.ActionLink("Funk", "Funk", "Eventoes", null, new { @class = "btn btn-secondary" })
+                    @Html.ActionLink("Sertanejo", "Sertanejo", "Eventoes", null, new { @class = "btn btn-secondary" })
+                    @Html.ActionLink("MPB", "Mpb", "Eventoes", null, new { @class = "btn btn-secondary" })
+                    @Html.ActionLink("Reggae", "Reggae", "Eventoes", null, new { @class = "btn btn-secondary" })
+                    @Html.ActionLink("Retrô", "retro", "Eventoes", null, new { @class = "btn btn-secondary" })
+                    @Html.ActionLink("Rock", "Rock", "Eventoes", null, new { @class = "btn btn-secondary" })
+
+
+                </div>
+            </div>
         </div>
 
     </div>
     <div class="container body-content">
+
         @RenderBody()
         <hr />
         <footer>

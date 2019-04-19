@@ -147,9 +147,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201904092254465_run.cs" />
-    <Compile Include="Migrations\201904092254465_run.Designer.cs">
-      <DependentUpon>201904092254465_run.cs</DependentUpon>
+    <Compile Include="Migrations\201904182124254_run.cs" />
+    <Compile Include="Migrations\201904182124254_run.Designer.cs">
+      <DependentUpon>201904182124254_run.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CadCliente.cs" />
@@ -245,6 +245,13 @@
     <Content Include="Views\Publico\AcessoNegado.cshtml" />
     <Content Include="Views\Publico\Logar.cshtml" />
     <Content Include="Views\Shared\_layoutUser.cshtml" />
+    <Content Include="Views\Eventoes\Rock.cshtml" />
+    <Content Include="Views\Eventoes\Sertanejo.cshtml" />
+    <Content Include="Views\Eventoes\Funk.cshtml" />
+    <Content Include="Views\Eventoes\Reggae.cshtml" />
+    <Content Include="Views\Eventoes\Retro.cshtml" />
+    <Content Include="Views\Eventoes\Mpb.cshtml" />
+    <Content Include="Views\Eventoes\Eletronica.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -264,8 +271,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904092254465_run.resx">
-      <DependentUpon>201904092254465_run.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904182124254_run.resx">
+      <DependentUpon>201904182124254_run.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

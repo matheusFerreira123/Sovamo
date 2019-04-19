@@ -24,6 +24,36 @@ namespace Sovamo.Controllers
         {
             return View(db.Eventoes.ToList().Where(o => o.Dispsorteio == 0));
         }
+        public ActionResult Eletronica()
+        {
+            return View(db.Eventoes.ToList().Where(o => o.EstiloMusical == EstiloMusical.Eletronica));
+        }
+        public ActionResult Funk()
+        {
+            return View(db.Eventoes.ToList().Where(o => o.EstiloMusical == EstiloMusical.Funk));
+        }
+        public ActionResult Mpb()
+        {
+            return View(db.Eventoes.ToList().Where(o => o.EstiloMusical == EstiloMusical.MPB));
+        }
+        public ActionResult Reggae()
+        {
+            return View(db.Eventoes.ToList().Where(o => o.EstiloMusical == EstiloMusical.Reggae));
+        }
+        public ActionResult Retro()
+        {
+            return View(db.Eventoes.ToList().Where(o => o.EstiloMusical == EstiloMusical.Retro));
+        }
+        public ActionResult Rock()
+        {
+            return View(db.Eventoes.ToList().Where(o => o.EstiloMusical == EstiloMusical.Rock));
+        }
+        public ActionResult Sertanejo()
+        {
+            return View(db.Eventoes.ToList().Where(o => o.EstiloMusical == EstiloMusical.Sertanejo));
+        }
+
+
 
         // GET: Eventoes/Details/5
         public ActionResult Details(int? id)
