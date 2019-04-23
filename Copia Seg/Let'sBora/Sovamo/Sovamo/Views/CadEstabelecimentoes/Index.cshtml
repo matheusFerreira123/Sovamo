@@ -4,8 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Meus Estabelecimentos</h2>
-<br />
+<h2>Estabelecimentos</h2>
 
 
 <table class="table">
@@ -13,21 +12,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Nome)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Razao)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CpfCliente)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Cnpj)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Endereço)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Telefone)
-        </th>
+        
         <th>
             @Html.DisplayNameFor(model => model.Descricão)
         </th>
@@ -37,7 +22,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Situacao)
         </th>
-        <th></th>
+        
     </tr>
 
 @foreach (var item in Model) {
@@ -45,21 +30,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.Nome)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Razao)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CpfCliente)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cnpj)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Endereço)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Telefone)
-        </td>
+        
         <td>
             @Html.DisplayFor(modelItem => item.Descricão)
         </td>
@@ -70,9 +41,8 @@
             @Html.DisplayFor(modelItem => item.Situacao)
         </td>
         <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.EstabelecimentoId }, new { @class = "btn btn-primary" }) 
-            
-            @Html.ActionLink("Excluir", "Delete", new { id=item.EstabelecimentoId }, new { @class = "btn btn-danger" })
+            |
+            @Html.ActionLink("Detalhes", "Detais", new { id=item.EstabelecimentoId }, new { @class = "btn btn-success" })
         </td>
     </tr>
 }

@@ -13,24 +13,19 @@ namespace Sovamo.Models
         Aleatorio,
         [Display(Name = "Rock")]
         Rock,
-        [Display(Name = "Blues")]
-        Blues,
         [Display(Name = "Sertanejo")]
         Sertanejo,
         [Display(Name = "Funk")]
         Funk,
         [Display(Name = "Reggae")]
         Reggae,
-        [Display(Name = "Jazz")]
-        Jazz,
-        [Display(Name = "Raiz")]
-        Raiz,
+        [Display(Name = "Retro")]
+        Retro,
         [Display(Name = "MPB")]
         MPB,
         [Display(Name = "Eletronica")]
         Eletronica,
-        [Display(Name = "Acustico")]
-        Acustico,
+        
 
     }
 
