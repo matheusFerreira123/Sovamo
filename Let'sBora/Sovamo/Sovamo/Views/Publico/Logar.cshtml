@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Sovamo.Models.CadCliente>
+@{
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+    ViewBag.Title = "Login";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <hr />
+        <h3 class="text-center">@ViewBag.Error</h3>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <h2 style="margin-left: 25%">Login</h2>
+            <label class="control-label col-md-2">
+                Email
+            </label>
+            <div>
+                <div class="col-md-10 ">
+                    <input type="text" name="email" id="email" class="form-control" />
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">
+                Senha
+            </label>
+            <div class="col-md-10">
+                <input type="password" name="senha" id="senha" class="form-control" />
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                @Html.ActionLink("Logar", "Index", "CadEstabelecimentoes", null, new { @class = "btn btn-default" })
+                @Html.ActionLink("Cadastrar como Cliente", "Create", "CadClientes", null, new { @class = "btn btn-default" })
+                @Html.ActionLink("Cadastrar como Usuário", "Create", "CadEUsuarios", null, new { @class = "btn btn-default" })
+
+                @*<input type="submit" value="Entrar" class="btn btn-default" />*@
+            </div>
+        </div>
+    </div>
+}

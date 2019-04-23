@@ -1,0 +1,90 @@
+﻿@model Sovamo.Models.CadEstabelecimento
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CadEstabelecimento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Razao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Razao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CpfCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CpfCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cnpj)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cnpj)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Endereço)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Endereço)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricão)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricão)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.horario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.horario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Situacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Situacao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EstabelecimentoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
