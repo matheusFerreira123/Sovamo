@@ -147,9 +147,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201904182124254_run.cs" />
-    <Compile Include="Migrations\201904182124254_run.Designer.cs">
-      <DependentUpon>201904182124254_run.cs</DependentUpon>
+    <Compile Include="Migrations\201904272017238_run.cs" />
+    <Compile Include="Migrations\201904272017238_run.Designer.cs">
+      <DependentUpon>201904272017238_run.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CadCliente.cs" />
@@ -271,8 +271,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904182124254_run.resx">
-      <DependentUpon>201904182124254_run.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904272017238_run.resx">
+      <DependentUpon>201904272017238_run.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

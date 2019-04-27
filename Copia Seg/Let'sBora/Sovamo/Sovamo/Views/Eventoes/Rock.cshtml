@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Sovamo.Models.Evento>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Eventos de Rock</h2>
+
+
+<table class="table">
+
+
+    @foreach (var item in Model)
+    {
+        <div style="width:17%;background-color:lightsteelblue; margin-top: 10px; margin-left: 25px; border-radius:10px; float:left">
+            <div style="width:90%; height:200px; text-align:center; background-color:aliceblue; margin-left: 5%; margin-top: 10px; float:left">
+                Foto
+            </div>
+
+            <div style="float:left; width: 100%;text-align:center">
+                @Html.DisplayFor(modelItem => item.Nome)
+            </div>
+            <div style="float:left; width: 100%;text-align:center">
+                @Html.DisplayFor(modelItem => item.Atracao)
+            </div>
+            <div style="float:left; width: 100%;">
+                @Html.DisplayFor(modelItem => item.Dia)
+            </div>
+            <div style="float:left; width: 100%;">
+                @Html.DisplayFor(modelItem => item.Dispsorteio)
+            </div>
+            <div style="text-align:center; margin-bottom:30px; float:initial">
+
+                @Html.ActionLink("Ver mais...", "Details", new { id = item.EventoId }, new { @class = "btn btn-success" })
+            </div>
+            <div id="btnssome">
+                @Html.ActionLink("Edit", "Edit", new { id = item.EventoId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.EventoId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.EventoId })
+            </div>
+        </div>
+    }
+
+</table>
