@@ -9,55 +9,44 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Nome)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Atracao)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EstiloMusical)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Descricao)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Dia)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Dispsorteio)
-        </th>
-        <th></th>
-    </tr>
+    
+<div style="width:17%;background-color:lightsteelblue; margin-top: 10px; margin-left: 25px; border-radius:10px; float:left; height: 355px; text-align:center">
+   <div style="font-family:'Times New Roman', Times, serif; font-size: 1500%">+</div>
+</div>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Atracao)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EstiloMusical)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Descricao)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Dia)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Dispsorteio)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.EventoId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.EventoId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.EventoId })
-        </td>
-    </tr>
-}
 
-</table>
+    @foreach (var item in Model)
+    {
+
+        <div style="width:17%;background-color:lightsteelblue; margin-top: 10px; margin-left: 25px; border-radius:10px; float:left">
+            <div style="width:90%; height:200px; text-align:center; background-color:aliceblue; margin-left: 5%; margin-top: 10px; float:left">
+                Foto
+            </div>
+
+            <div style="float:left; width: 100%;text-align:center">
+                @Html.DisplayFor(modelItem => item.Nome)
+            </div>
+            <div style="float:left; width: 100%;text-align:center">
+                @Html.DisplayFor(modelItem => item.Atracao)
+            </div>
+            <div style="float:left; width: 100%;">
+                @Html.DisplayFor(modelItem => item.Dia)
+            </div>
+            <div style="float:left; width: 100%;">
+                @Html.DisplayFor(modelItem => item.Dispsorteio)
+            </div>
+            <div style="text-align:center; margin-bottom:30px; float:initial">
+
+                @Html.ActionLink("Ver mais...", "Details", new { id = item.EventoId }, new { @class = "btn btn-success" })
+            </div>
+            <div id="btnssome">
+                @Html.ActionLink("Edit", "Edit", new { id = item.EventoId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.EventoId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.EventoId })
+            </div>
+        </div>
+
+    }
+
+
+
