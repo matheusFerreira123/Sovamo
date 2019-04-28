@@ -17,7 +17,7 @@ namespace Sovamo.Controllers
         // GET: Eventoes
         public ActionResult Index()
         {
-            return View(db.Eventoes.ToList());
+            return View(db.Eventoes.OrderBy(o => o.Dia));
         }
 
         public ActionResult Sorteio()

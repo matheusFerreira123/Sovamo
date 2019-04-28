@@ -10,7 +10,7 @@ namespace Sovamo.Models
     public class CadUsuario
     {
         [Key]
-        public int ClienteID { get; set; }
+        public int UsuarioID { get; set; }
 
         [Required(ErrorMessage = "Preencha o nome completo.")]
         [MaxLength(100, ErrorMessage = "O nome deve ter até {1} caracteres.")]

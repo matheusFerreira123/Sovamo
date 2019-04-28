@@ -140,16 +140,15 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CadClientesController.cs" />
     <Compile Include="Controllers\CadEstabelecimentoesController.cs" />
-    <Compile Include="Controllers\CadUsuariosController.cs" />
     <Compile Include="Controllers\EventoesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PublicoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201904272017238_run.cs" />
-    <Compile Include="Migrations\201904272017238_run.Designer.cs">
-      <DependentUpon>201904272017238_run.cs</DependentUpon>
+    <Compile Include="Migrations\201904281756393_run.cs" />
+    <Compile Include="Migrations\201904281756393_run.Designer.cs">
+      <DependentUpon>201904281756393_run.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CadCliente.cs" />
@@ -168,6 +167,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css.css" />
     <Content Include="Content\Images\15895471_233176057131415_941627293008824202_o.jpg" />
     <Content Include="Content\Images\adicionar.png" />
     <Content Include="Content\Images\ativar.png" />
@@ -226,11 +226,6 @@
     <Content Include="Views\CadEstabelecimentoes\Details.cshtml" />
     <Content Include="Views\CadEstabelecimentoes\Edit.cshtml" />
     <Content Include="Views\CadEstabelecimentoes\Index.cshtml" />
-    <Content Include="Views\CadUsuario\Create.cshtml" />
-    <Content Include="Views\CadUsuario\Delete.cshtml" />
-    <Content Include="Views\CadUsuario\Details.cshtml" />
-    <Content Include="Views\CadUsuario\Edit.cshtml" />
-    <Content Include="Views\CadUsuario\Index.cshtml" />
     <Content Include="Views\CadUsuarios\Create.cshtml" />
     <Content Include="Views\CadUsuarios\Delete.cshtml" />
     <Content Include="Views\CadUsuarios\Details.cshtml" />
@@ -271,8 +266,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904272017238_run.resx">
-      <DependentUpon>201904272017238_run.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904281756393_run.resx">
+      <DependentUpon>201904281756393_run.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
