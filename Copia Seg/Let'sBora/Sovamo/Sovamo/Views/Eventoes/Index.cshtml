@@ -3,16 +3,17 @@
 @{
     ViewBag.Title = "Index";
 }
+@Styles.Render("~/Content/css")
 
-<h2>Index</h2>
+<div id="textousuario" style="width:70%; float:left; background-color:transparent;"><p id="foi" style="font-family:#ff0000; font-size: 150%">Selecionamos pra você</p></div>
+<div id="textocliente" style="width:70%; float:left; background-color:transparent;"><p id="foi" style="font-family:#ff0000; font-size: 150%">Meus Eventos</p></div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-    
-<div style="width:17%;background-color:lightsteelblue; margin-top: 10px; margin-left: 25px; border-radius:10px; float:left; height: 355px; text-align:center">
-   <div style="font-family:'Times New Roman', Times, serif; font-size: 1500%">+</div>
-</div>
+@Html.ActionLink("+", "Create", "Eventoes", null, new { @style = "width:17%; background-color:lightsteelblue; margin-top: 10px; margin-left: 25px; border-radius:10px; float:left; height: 355px; text-align:center; font-size: 1500%" })
+
+
+@*<div style="width:17%;background-color:lightsteelblue; margin-top: 10px; margin-left: 25px; border-radius:10px; float:left; height: 355px; text-align:center">
+        <div style="font-family:'Times New Roman', Times, serif; font-size: 1500%">+</div>
+    </div>*@
 <table class="table">
 
     @foreach (var item in Model)
@@ -38,15 +39,12 @@
             <div style="text-align:center; margin-bottom:30px; float:initial">
 
                 @Html.ActionLink("Ver mais...", "Details", new { id = item.EventoId }, new { @class = "btn btn-success" })
+                @Html.ActionLink("Editar", "Edit", new { id = item.EventoId }, new { @class = "btn btn-warning" })
             </div>
-            <div id="btnssome">
-                @Html.ActionLink("Edit", "Edit", new { id = item.EventoId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.EventoId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.EventoId })
-            </div>
+
         </div>
 
     }
 
-    </table>
+</table>
 

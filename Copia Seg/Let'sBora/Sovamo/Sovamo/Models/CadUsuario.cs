@@ -9,8 +9,7 @@ namespace Sovamo.Models
 {
     public class CadUsuario
     {
-        [Key]
-        public int UsuarioID { get; set; }
+        public int CadUsuarioID { get; set; }
 
         [Required(ErrorMessage = "Preencha o nome completo.")]
         [MaxLength(100, ErrorMessage = "O nome deve ter até {1} caracteres.")]
