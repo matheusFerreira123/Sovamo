@@ -15,10 +15,21 @@ namespace Sovamo.Controllers
         private Context db = new Context();
 
         // GET: Eventoes
-        public ActionResult Index()
+        
+
+        public ActionResult Index(string searchString)
         {
-            return View(db.Eventoes.OrderBy(o => o.Dia));
+            var eventos = from m in db.Eventoes
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                eventos = eventos.Where(s => s.Nome.Contains(searchString));
+            }
+
+            return View(eventos);
         }
+
 
         public ActionResult Sorteio()
         {
@@ -158,19 +169,6 @@ namespace Sovamo.Controllers
             }
             base.Dispose(disposing);
         }
-        [HttpPost]
-        public ActionResult Search(FormCollection fc, string searchString)
-        {
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                var eventos = db.Eventoes.Include(c => c.Nome).Include(e =>
-                e.Nome).Where(c => c.Nome.Contains(searchString)).OrderBy(o => o.Nome);
-                return View("Index", eventos.ToList());
-            }
-            else
-            {
-                return RedirectToAction("Index");
-            }
-        }
+        
     }
 }
