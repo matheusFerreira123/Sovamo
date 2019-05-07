@@ -158,5 +158,19 @@ namespace Sovamo.Controllers
             }
             base.Dispose(disposing);
         }
+        [HttpPost]
+        public ActionResult Search(FormCollection fc, string searchString)
+        {
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                var eventos = db.Eventoes.Include(c => c.Nome).Include(e =>
+                e.Nome).Where(c => c.Nome.Contains(searchString)).OrderBy(o => o.Nome);
+                return View("Index", eventos.ToList());
+            }
+            else
+            {
+                return RedirectToAction("Index");
+            }
+        }
     }
 }

@@ -13,7 +13,7 @@ namespace Sovamo.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201905030104408_run"; }
+            get { return "201905070001396_run"; }
         }
         
         string IMigrationMetadata.Source

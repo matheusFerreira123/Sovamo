@@ -20,7 +20,7 @@ namespace Sovamo.Models
         public DbSet<CadCliente> CadClientes { get; set; }
         public DbSet<CadEstabelecimento> CadEstabelecimentoes { get; set; }
         public DbSet<CadUsuario> CadUsuarios { get; set; }
-        public DbSet<Sovamo.Models.Evento> Eventoes { get; set; }
+        public DbSet<Evento> Eventoes { get; set; }
         
 
 
