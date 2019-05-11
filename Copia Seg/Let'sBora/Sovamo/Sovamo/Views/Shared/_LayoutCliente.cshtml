@@ -1,9 +1,11 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <title>@Page.Title</title>
+    @RenderSection("head", required: false)
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -11,12 +13,12 @@
         #btnParticipar {
             display: none
         }
-        #textousuario{
+
+        #textousuario {
             display: none
         }
     </style>
 </head>
-
 <body style="background-color:#222437">
     <div class="navbar navbar-inverse navbar-fixed-top" style="background-color:#0d0e1d">
         <div class="container">
@@ -38,10 +40,37 @@
 
         </div>
     </div>
-    <div id="dentro" class="col-lg-2"style="background-color:#222437; height: 950px">
-        <div id="painel" class="col-lg-12" style="background-color:#0d0e1d; height:280px; margin-top: 10px; float:left">
+    <div id="dentro" class="col-lg-2" style="background-color:#222437; height: 950px">
+        <div id="painel" class="col-lg-12" style="background-color:#0d0e1d; height:340px; margin-top: 10px; float:left">
             <div class="col-lg-12;" style="float:left"><p style="font-size:150%; text-align: center">Visualizações Hoje</p></div>
-            <div class="col-lg-12"; style="float:left"><p style="font-size:1100%; text-align: center">0</p></div>
+            <div class="col-lg-12" ; style="float:left"><p style="font-size:1100%; text-align: center">0</p></div>
+
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter" style="float:left; margin-left: 20%">
+                Ver mais...
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="exampleModalCenterTitle">Você pode saber tudo!!!</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Ao comprar essa espetacular função você poderá visualizar quantas e quem viu seu evento, quantas pessoas comprou seu ingresso e muito mais, para saber mais clique em me interessei e veja os módulos disponíveis.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Não Obrigado</button>
+                            <button type="button" class="btn btn-primary">Me interessei</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
         <div id="Menu2" class="col-lg-12" style="background-color:#0d0e1d; height:595px; margin-top: 10px; float:left">
 
@@ -57,12 +86,29 @@
 
                 </div>
             </div>
+
+            <div class="btn-group dropright" style="float:left; margin-top:3px">
+                <button class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:transparent; border-color:transparent; float:left">
+                    Filtro por Estilo
+                </button>
+                <div class="dropdown-menu">
+                    @Html.ActionLink("Eletronica", "Eletronica", "Eventoes", null, new { @class = "btn btn-secondary" })
+                    @Html.ActionLink("Funk", "Funk", "Eventoes", null, new { @class = "btn btn-secondary" })
+                    @Html.ActionLink("Sertanejo", "Sertanejo", "Eventoes", null, new { @class = "btn btn-secondary" })
+                    @Html.ActionLink("MPB", "Mpb", "Eventoes", null, new { @class = "btn btn-secondary" })
+                    @Html.ActionLink("Reggae", "Reggae", "Eventoes", null, new { @class = "btn btn-secondary" })
+                    @Html.ActionLink("Retrô", "retro", "Eventoes", null, new { @class = "btn btn-secondary" })
+                    @Html.ActionLink("Rock", "Rock", "Eventoes", null, new { @class = "btn btn-secondary" })
+
+                </div>
+            </div>
+
             <div class="btn-group dropright" style="float:left; margin-top:3px">
                 <button class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:transparent; border-color:transparent; float:left">
                     Eventos
                 </button>
                 <div class="dropdown-menu">
-                    entos
+                    
                     @Html.ActionLink("Adicionar Eventos", "Create", "Eventoes", null, new { @class = "btn btn-secondary" })
                     @Html.ActionLink("Meus Eventos", "Index", "Eventoes", null, new { @class = "btn btn-secondary" })
 
@@ -83,24 +129,25 @@
 
         </div>
     </div>
-        <div id="Campobusca" class="col-lg-9" style="background-color:#0d0e1d; height:40px; margin-top: 10px; float:left; margin-left:10px; float:left">
-            <form class="form-inline my-2 my-lg-0" style="margin-top:3px">
-                <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="margin-left: 66%">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-            </form>
-        </div>
 
 
-        <div class="container body-content" style="width:100%">
 
-            @RenderBody()
-            <hr />
-            <footer>
-                <p>&copy; @DateTime.Now.Year</p>
-            </footer>
-        </div>
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @RenderSection("scripts", required: false)
+    <div class="container body-content" style="width:100%">
+
+        @RenderBody()
+
+
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
 </body>
 </html>
+
+
+
+
+
+
+
+

@@ -40,12 +40,14 @@
             </div>
             <div style="text-align:center; margin-bottom:30px; float:initial">
 
+               
                 @Html.ActionLink("Ver mais...", "Details", new { id = item.EventoId }, new { @class = "btn btn-success" })
+                
             </div>
             <div id="btnssome">
-                @Html.ActionLink("Edit", "Edit", new { id = item.EventoId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.EventoId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.EventoId })
+
+                @Html.ActionLink("Editar", "Edit", new { id = item.EventoId }, new { @class = "btn btn-warning" })
+
             </div>
         </div>
     }

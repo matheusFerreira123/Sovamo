@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<Sovamo.Models.CadCliente>
 @{
-    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+    //Layout = "~/Views/Shared/_LayoutUser.cshtml";
     ViewBag.Title = "Login";
 }
 @using (Html.BeginForm())
@@ -29,10 +29,14 @@
                 <input type="password" name="senha" id="senha" class="form-control" />
             </div>
         </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Entrar" class="btn btn-default"/>
+            </div>
+        </div>
         
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                @Html.ActionLink("Logar", "Index", "CadEstabelecimentoes", null, new { @class = "btn btn-default" })
                 @Html.ActionLink("Cadastrar como Cliente", "Create", "CadClientes", null, new { @class = "btn btn-default" })
                 @Html.ActionLink("Cadastrar como Usuário", "Create", "CadEUsuarios", null, new { @class = "btn btn-default" })
 

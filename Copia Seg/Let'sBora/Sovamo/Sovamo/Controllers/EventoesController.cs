@@ -30,8 +30,13 @@ namespace Sovamo.Controllers
             return View(eventos);
         }
 
+        //public ActionResult Index(string searchString)
+        //{
+        //    return View(db.Eventoes.OrderByDesceding(o => o.Dia));
+        //}
 
-        public ActionResult Sorteio()
+
+            public ActionResult Sorteio()
         {
             return View(db.Eventoes.ToList().Where(o => o.Dispsorteio == 0));
         }

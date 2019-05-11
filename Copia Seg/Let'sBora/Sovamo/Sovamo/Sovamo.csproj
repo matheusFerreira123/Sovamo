@@ -272,7 +272,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Shared\_LayoutCliente.cshtml" />
     <Content Include="Views\CadClientes\Create.cshtml" />
     <Content Include="Views\CadClientes\Delete.cshtml" />
     <Content Include="Views\CadClientes\Details.cshtml" />
@@ -304,6 +303,7 @@
     <Content Include="Views\Eventoes\Retro.cshtml" />
     <Content Include="Views\Eventoes\Mpb.cshtml" />
     <Content Include="Views\Eventoes\Eletronica.cshtml" />
+    <Content Include="Views\Shared\_LayoutCliente.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

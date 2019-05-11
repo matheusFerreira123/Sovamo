@@ -25,22 +25,26 @@
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Atracao)
-            </td>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Atracao)
+        </td>
 
-            <td>
-                @Html.DisplayFor(modelItem => item.Dia)
-            </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dia)
+        </td>
 
-            <td>
-                @Html.ActionLink("Ver mais...", "Details", new { id = item.EventoId }, new { @class = "btn btn-success" })
-            </td>
-        </tr>
+        <td>
+            @Html.ActionLink("Ver mais...", "Details", new { id = item.EventoId }, new { @class = "btn btn-success" })
+
+        </td>
+        <div id="btnssome">
+            @Html.ActionLink("Editar", "Edit", new { id = item.EventoId }, new { @class = "btn btn-warning" })
+        </div>
+    </tr>
     }
 
 </table>

@@ -16,18 +16,23 @@ namespace Sovamo.Controllers
         // GET: Publico
         public ActionResult Logar()
         {
+
             return View();
         }
 
         [HttpPost]
         public ActionResult Logar(string email, string senha)
         {
+           
             if (Funcoes.AutenticarUsuario(email, senha) == false)
             {
                 ViewBag.Error = "Nome de usuário e/ou senha inválida";
                 return View();
             }
-            return RedirectToAction("_LayoutCliente", "Shared");
+            var myView = View();
+            myView.MasterName = "~/Views/Shared/_LayoutCliente.cshtml";
+            return myView;
+
         }
         public ActionResult AcessoNegado()
         {
