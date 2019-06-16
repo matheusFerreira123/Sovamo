@@ -225,7 +225,7 @@ h1,h2,h3,h4,h5,h6,p{
 
 /*banner*/
 .banner-full-image {
-    background: rgba(0, 0, 0, 0) url("../images/banner.png") no-repeat scroll center top / cover ;
+    background: rgba(0, 0, 0, 0) url("../images/logodosite.jpg") no-repeat scroll center top / cover ;
     background-attachment: fixed;
     height: 480px;
     position: relative;

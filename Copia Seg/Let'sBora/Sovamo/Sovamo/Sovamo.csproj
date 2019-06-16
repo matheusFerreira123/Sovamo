@@ -222,6 +222,7 @@
     <Content Include="images\icons\portfolio-hover.png" />
     <Content Include="images\icons\portfolio.png" />
     <Content Include="images\loading.svg" />
+    <Content Include="images\logodosite.jpg" />
     <Content Include="images\pin.png" />
     <Content Include="images\pinn.png" />
     <Content Include="images\pub.png" />
